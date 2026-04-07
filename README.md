@@ -77,6 +77,70 @@ NexaAI leverages **LangSmith** to provide a "glass box" view of the AI's interna
 * Evaluate model behavior across different prompt iterations.
 
 ---
+# 🚀 NexaAI Knowledge Assistant  
+**Self-RAG Powered AI Knowledge Retrieval System**
+
+NexaAI Knowledge Assistant is a **production-oriented AI knowledge retrieval system** built using a **Self-Reflective Retrieval-Augmented Generation (Self-RAG)** architecture.  
+It delivers **grounded, verifiable, and context-aware responses** while minimizing hallucinations through iterative reasoning and validation workflows.
+
+---
+
+# 📌 Project Overview
+
+Traditional RAG pipelines often retrieve documents blindly and trust retrieved content without validation, which leads to hallucinations and irrelevant responses.
+
+**NexaAI solves this problem** using a **Self-RAG architecture** that introduces intelligent decision loops, validation nodes, and grounded answer verification.
+
+The system uses **LangGraph-based state workflows** to create deterministic AI pipelines instead of unreliable black-box chains.
+
+---
+
+# 🧠 Core Architecture: Self-RAG Workflow
+
+```text
+User Query
+     │
+     ▼
+Retrieval Decision Node
+     │
+     ▼
+Document Retrieval
+     │
+     ▼
+Relevance Evaluation Node
+     │
+     ▼
+Query Rewriting Node (if needed)
+     │
+     ▼
+Answer Generation
+     │
+     ▼
+Grounding & Hallucination Detection
+     │
+     ▼
+Answer Usefulness Check
+     │
+     ▼
+Retry or Final Response
+
+NexaAI-Knowledge-Assistant/
+
+├── chroma_langchain_db/     # Vector database storage
+├── documents/               # Source knowledge documents
+├── ingestions/              # Document ingestion pipeline
+├── models/                  # LLM configuration & schemas
+│   ├── llm.py
+│   ├── StateSchema.py
+│
+├── nodes/                   # Self-RAG decision nodes
+├── workflow/                # LangGraph workflow logic
+│
+├── main.py                  # Application entry point
+├── README.md
+├── pyproject.toml
+├── uv.lock
+└── .gitignore
 
 ## 🔮 Roadmap
 
