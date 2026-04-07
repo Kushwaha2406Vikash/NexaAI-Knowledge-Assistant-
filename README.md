@@ -141,7 +141,7 @@ NexaAI-Knowledge-Assistant/
 ├── pyproject.toml
 ├── uv.lock
 └── .gitignore
-
+```
 ## 🔮 Roadmap
 
 - [ ] **Multi-source Ingestion:** Expand beyond PDFs to include Databases and live APIs.
