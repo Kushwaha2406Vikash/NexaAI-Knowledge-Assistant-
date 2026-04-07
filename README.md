@@ -45,12 +45,32 @@ Answer Usefulness Check
      ▼
 Retry or Final Response 
 
-🔧 Tech Stack
-Core Technologies
-Python 3.11+ — Backend logic
-LangChain — LLM orchestration
-LangGraph — State-based AI workflow
-LangSmith — Observability & tracing
-Streamlit — Interactive UI
-ChromaDB — Vector storage
-PyMuPDF — Document parsing
+🔧# Tech Stack
+** Core Technologies **
+- Python 3.11+ — Backend logic
+- LangChain — LLM orchestration
+- LangGraph — State-based AI workflow
+- LangSmith — Observability & tracing
+- Streamlit — Interactive UI
+- ChromaDB — Vector storage
+- PyMuPDF — Document parsing 
+
+NexaAI-Knowledge-Assistant/
+
+├── chroma_langchain_db/     # Vector database storage
+├── documents/               # Source knowledge documents
+├── ingestions/              # Document ingestion pipeline
+├── models/                  # LLM configuration & schemas
+│   ├── llm.py
+│   ├── StateSchema.py
+│
+├── nodes/                   # Self-RAG decision nodes
+├── workflow/                # LangGraph workflow logic
+│
+├── main.py                  # Application entry point
+├── README.md
+├── pyproject.toml
+├── uv.lock
+└── .gitignore
+
+
